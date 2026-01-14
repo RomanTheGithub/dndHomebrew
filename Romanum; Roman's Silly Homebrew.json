@@ -1,0 +1,1946 @@
+{
+	"$schema": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
+	"siteVersion": "2.11.3",
+	"_meta": {
+		"sources": [
+			{
+				"json": "RomansSillyHomebrew",
+				"abbreviation": "RSH",
+				"full": "Roman's Silly Homebrew",
+				"version": "1.0.0",
+				"authors": [
+					"Romanum"
+				],
+				"convertedBy": [
+					"Romanum"
+				],
+				"color": "e84f85",
+				"colorNight": "e84f85"
+			}
+		],
+		"optionalFeatureTypes": {
+			"M:EQ": "Elemental Quirk"
+		},
+		"dateAdded": 1767852472,
+		"dateLastModified": 1768365779,
+		"edition": "one"
+	},
+	"spell": [
+		{
+			"name": "Stagger",
+			"source": "RomansSillyHomebrew",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when a creature provokes an opportunity attack from you"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You forsee a creature stumbling in their path as they pass you. The creature that provoked the Opportunity Attack makes a Dexterity Saving Throw, gaining the {@condition Prone|XPHB} condition on a failed save."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "XPHB"
+					},
+					{
+						"name": "Druid",
+						"source": "XPHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "XPHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "XPHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Soaring Shear",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "EFA"
+					},
+					{
+						"name": "Medium",
+						"source": "RomansSillyHomebrew"
+					},
+					{
+						"name": "Paladin",
+						"source": "XPHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "XPHB"
+					}
+				]
+			},
+			"entries": [
+				"You shear the air with your blade, sending out a streak of air in a line 60 feet long and 5 feet wide in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw or take damage equal to two rolls of the weapon component's damage dice plus your spellcasting ability modifier. The damage type will be that of your weapon's damage type."
+			],
+			"source": "RomansSillyHomebrew",
+			"savingThrow": [
+				"dexterity"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Using a Higher-Level Spell Slot",
+					"entries": [
+						"The damage increases by one roll of the weapon's damage dice for each spell slot level above 1."
+					]
+				}
+			],
+			"components": {
+				"v": true,
+				"m": {
+					"text": "a melee weapon with which you have proficiency and that is worth 1+ CP",
+					"cost": 1
+				}
+			},
+			"areaTags": [
+				"L"
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			]
+		}
+	],
+	"optionalfeature": [
+		{
+			"name": "Elemental Body",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"Your body is partially made of your element, and thus may behave in unusual ways. When you get hit by an attack roll, you may take a reaction to attempt to have the attack phase through your body as it impacts your element instead of you. Your AC increases by an amount equal to your Wisdom modifier against the triggering attack, potentially causing it to miss. You can use this feature an amount of times equal to your Wisdom modifier, and regain all expended uses on a Long Rest.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"The elemental nature of your body becomes so attuned that it almost automatically reacts to incoming attacks. Using this feature no longer takes a reaction."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Swiftness",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"You propel yourself with elemental bursts, allowing you to maneuver quickly along the battlefield. Your speed and jump distance increase by 5 when you're not wearing heavy armor.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"Your speed and jump distance increase by 10 when not wearing heavy armor instead of 5."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Reach",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"Your element flings itself out from your weapon, effectively extending the reach. Once per turn, one of your attacks with a weapon or an Unarmed Strike gains an additional 5 feet of reach.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"You can use this feature once per attack instead of once per turn."
+					]
+				}
+			]
+		},
+		{
+			"name": "Intelligent Elementalism",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"Your element is accessed not through intuition, but through study. Although stamped on you, you must research how to unlock it. Your spellcasting ability becomes Intelligence for your Medium spells, your Primary Ability becomes Intelligence instead of Wisdom, and Medium abilities using Wisdom may instead use Intelligence.",
+				"You cannot take this quirk if you have the Driven Elementalism quirk.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"You may replace one prepared Medium spell with another Medium spell of the same level when you take a Short Rest. You may not do this again until you finish a Long Rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Driven Elementalism",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"Your element is accessed not through intuition, but through personal drive. Although stamped on you, it takes a strong will to access your planar energy. Your spellcasting ability becomes Charisma for your Medium spells, your Primary Ability becomes Charisma instead of Wisdom, and Medium abilities using Wisdom may instead use Charisma.",
+				"You cannot take this quirk if you have the Intelligent Elementalism quirk.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"When casting a spell that requires a saving throw, you can change it make it a Charisma saving throw. Once you do so, you cannot do so again until you finish a Long Rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Conjuration",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"As a Bonus Action, you can conjure a weapon made out of your element. It must be a normally nonmagical weapon that you are proficient in, and must cost no more than 250 GP. This weapon deals the same damage type as your Elemental Damage Type if you have one. This conjured weapon will last until you drop it, or until you use this feature again.",
+				"If the weapon has the thrown property, it will last until it hits an object after being thrown. If the weapon requires ammunition, you conjure it with an amount of ammunition ready equal to your Wisdom modifier.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"Conjured weapons requiring ammunition will not run out or need to be reloaded, and thrown weapons will re-conjure in the hand you threw it in after hitting their target (no action required)."
+					]
+				}
+			]
+		},
+		{
+			"name": "Planar Vision",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"As a Bonus Action you can gain 30 feet of Darkvision, or increase the range of your Darkvision by 30 if you already have it for a minute. Once you use this feasture, you cannot do so again until you finish a Long Rest.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"You can cast See Invisibility as a Bonus Action without expending a spell slot or using material components, however it will only last a minute. Once you do this you cannot do so again until you finish a Long Rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Familiar",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"Your planar energy allows you to conjure an elemental ally. You can cast the Find Familiar spell without expending a spell slot. In addition, any familiar conjured this way has the following properties.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Elemental",
+							"entries": [
+								"The familiar's creature type is Elemental."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resistance",
+							"entries": [
+								"The familiar gains Resistance against your Elemental Damage Type if you have one."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"A familiar conjured by this spell may take the Attack action, adding your Wisdom modifier to its attack and damage rolls. Additionally, when conjured it has additional maximum hit points equal to your Medium level."
+					]
+				}
+			]
+		}
+	],
+	"class": [
+		{
+			"name": "Medium",
+			"source": "RomansSillyHomebrew",
+			"edition": "one",
+			"primaryAbility": [
+				{
+					"str": true,
+					"wis": true
+				},
+				{
+					"dex": true,
+					"wis": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"str",
+				"dex"
+			],
+			"spellcastingAbility": "wis",
+			"casterProgression": "artificer",
+			"preparedSpellsProgression": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				6,
+				7,
+				7,
+				9,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				14,
+				14,
+				15,
+				15
+			],
+			"preparedSpellsChange": "restLong",
+			"featProgression": [
+				{
+					"name": "Epic Boon",
+					"category": [
+						"EB"
+					],
+					"progression": {
+						"19": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"shield"
+				],
+				"weapons": [
+					"simple",
+					"martial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"athletics",
+								"history",
+								"investigation",
+								"medicine",
+								"nature",
+								"perception",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"defaultData": [
+					{
+						"A": [
+							
+						],
+						"B": [
+							{
+								"value": 15000
+							}
+						]
+					}
+				],
+				"entries": [
+					"{@i Choose A or B:} (A) ; or (B) (wip)"
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"weapons": [
+						"martial"
+					],
+					"armor": [
+						"light",
+						"shield"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter Quirks|optionalfeatures|feature type=M:EQ}"
+					],
+					"rows": [
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						]
+					]
+				},
+				{
+					"colLabels": [
+						"{@filter Prepared Spells|spells|level=!0|class=Medium}"
+					],
+					"rows": [
+						[
+							2
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							7
+						],
+						[
+							9
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							12
+						],
+						[
+							12
+						],
+						[
+							14
+						],
+						[
+							14
+						],
+						[
+							15
+						],
+						[
+							15
+						]
+					]
+				},
+				{
+					"title": "Spell Slots per Spell Level",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=medium}",
+						"{@filter 2nd|spells|level=2|class=medium}",
+						"{@filter 3rd|spells|level=3|class=medium}",
+						"{@filter 4th|spells|level=4|class=medium}",
+						"{@filter 5th|spells|level=5|class=medium}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Spellcasting|Medium|RomansSillyHomebrew|1",
+				"Elemental Quirks|Medium|RomansSillyHomebrew|1",
+				"Elemental Style|Medium|RomansSillyHomebrew|2",
+				"Planar Connection|Medium|RomansSillyHomebrew|3",
+				"Planar Spells|Medium|RomansSillyHomebrew|3",
+				{
+					"classFeature": "Medium Subclass|Medium|RomansSillyHomebrew|3",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Medium|RomansSillyHomebrew|4",
+				"Improved Elemental Fighting|Medium|RomansSillyHomebrew|5",
+				{
+					"classFeature": "Subclass Feature|Medium|RomansSillyHomebrew|7",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Medium|RomansSillyHomebrew|8",
+				"Elemental Harmony|Medium|RomansSillyHomebrew|9",
+				"Intermediary|Medium|RomansSillyHomebrew|10",
+				{
+					"classFeature": "Subclass Feature|Medium|RomansSillyHomebrew|11",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Medium|RomansSillyHomebrew|12",
+				"Elemental Aberrations|Medium|RomansSillyHomebrew|14",
+				{
+					"classFeature": "Subclass Feature|Medium|RomansSillyHomebrew|15",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Medium|RomansSillyHomebrew|16",
+				"True Intermediary|Medium|RomansSillyHomebrew|17",
+				"One With The Element|Medium|RomansSillyHomebrew|18",
+				"Epic Boon|Medium|RomansSillyHomebrew|19",
+				"True Elemental|Medium|RomansSillyHomebrew|20"
+			],
+			"subclassTitle": "Medium Subclass",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"classFluff": [
+		{
+			"name": "Medium",
+			"source": "RomansSillyHomebrew",
+			"entries": [
+				{
+					"type": "section",
+					"name": "Medium",
+					"source": "RomansSillyHomebrew",
+					"entries": [
+						"Mediums are people stamped with strands of elemental magic that decide to become the intermediary of an Elemental plane.",
+						"They may have gotten their magic through a fated connection with the elemental from birth, or perhaps an epiphanic moment of connection with an elemental plane. However it happened, they know that their element is ready for them.",
+						"Mediums use their elemental power to strike down foes with raw concentrated magic, ushering each burst of element with utmost focus."
+					]
+				}
+			]
+		}
+	],
+	"classFeature": [
+		{
+			"name": "Spellcasting",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 1,
+			"entries": [
+				"Drawing from your innate magic, you can cast spells. See {@book chapter 7|XPHB|7} for the rules on spellcasting. The information below details how you use those rules with RangeMediumr spells, which appear in the {@filter Medium spell list|spells|class=Medium} later in the class's description.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spell Slots",
+							"entries": [
+								"The Medium Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a {@variantrule Long Rest|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Prepared Spells of Level 1+",
+							"entries": [
+								"You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two {@filter level 1 Medium spells|spells|class=Medium|level=1}.",
+								"The number of spells on your list increases as you gain Medium levels, as shown in the Prepared Spells column of the Medium Features table. Whenever that number increases, choose additional Medium spells until the number of spells on your list matches the number in the Medium Features table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 5 Medium, your list of prepared spells can include six Medium spells of level 1 or 2 in any combination.",
+								"If another Medium feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Medium spells for you."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Changing Your Prepared Spells",
+							"entries": [
+								"Whenever you finish a {@variantrule Long Rest|XPHB}, you can replace one spell on your list with another Medium spell for which you have spell slots."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Ability",
+							"entries": [
+								"Wisdom is your spellcasting ability for your Medium spells."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Focus",
+							"entries": [
+								"You can use an {@item Arcane Focus|XPHB} as a {@variantrule Spellcasting Focus|XPHB} for your Medium spells."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Quirks",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 1,
+			"entries": [
+				"Your unique connection to the instability of the Elemental planes comes with a few quirks. You cannot choose the same quirk twice, and every time you gain a Medium level you may change one quirk. At certain Medium levels your element may become more unpredictable, allowing you to choose an additional Elemental Quirk. Elemental Quirks are described in {@filter Elemental Quirk Options|optionalfeatures|feature type=M:EQ}."
+			]
+		},
+		{
+			"name": "Elemental Style",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 2,
+			"entries": [
+				"You gain an Elemental Style of your choice. Choose one of the options below.",
+				{
+					"type": "entries",
+					"name": "Corporal Elementalism",
+					"entries": [
+						"You fight infusing your element into your body. You may roll 1d6 in place of your normal damage for Unarmed Strikes, using your Wisdom modifier for the attack and damage rolls. Additionally once per turn after hitting an Unarmed Strike, you may infuse further elemental force into your blows, dealing an additional 1d4 damage of the same type (or, if you have one, your Elemental Damage Type). Your Unarmed Strike base damage increases to 1d8 when not wearing armor or a shield."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Elemental Mage",
+					"entries": [
+						"You focus on the magic of your element, opting to fight with spellcasting rather than weaponry. You learn Elementalism, along with two other damaging Sorcerer cantrips of your choice. The chosen cantrips count as Medium cantrips for you, and each time you gain a level you can replace one of these cantrips with another Sorcerer cantrip."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Elemental Archer",
+					"entries": [
+						"You channel your element to guide your shots. Choose a weapon with which you can make ranged attacks that you have proficiency in. You gain the ability to use the mastery property of this weapon. Additionally, once per turn, you can add your Wisdom modifier to the attack roll of this weapon before knowing the outcome of the roll."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Elemental Blade",
+					"entries": [
+						"Your weapon is fueled by the power of your plane. Choose a melee weapon with which you have proficiency. You gain the ability to use the mastery property of this weapon. Additionally, once per turn after hitting a melee attack with this weapon, you can strike harder with the force of your element, dealing an amount of additional damage equal to your Wisdom modifier. This additional damage will be the same as your Elemental Damage Type if you have one, or be the same as the damage type of the weapon if you do not."
+					]
+				},
+				"For any Elemental Styles that require you to choose a weapon to specialize in, you may change the weapon once every Long Rest."
+			]
+		},
+		{
+			"name": "Planar Connection",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"Your connection to your plane manifests in the form of Planar Points. You can expend these points to channel certain elemental abilities into your Medium features. You start with 3 maximum Planar Points, and gain one maximum Planar Point every time you level up.",
+				"You regain all Planar Points on a Long Rest, and regain half on a Short Rest."
+			]
+		},
+		{
+			"name": "Planar Spells",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"Your planar energy has a tendency to appear in your magic, even with spells that normally tend not to contain it. Your subclass grants you at least one Elemental Damage Type.",
+				"When you cast a spell that deals damage, you can change the damage type to one of your Elemental Damage Types if you expend a Planar Point and the original damage type was Acid, Cold, Fire, Lightning, Poison, or Thunder."
+			]
+		},
+		{
+			"name": "Improved Elemental Fighting",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 5,
+			"entries": [
+				"Your Elemental Fighting Style prowess increases. Each fighting style gains the following benefits listed for it:",
+				{
+					"type": "entries",
+					"name": "Corporal Elementalism",
+					"entries": [
+						"You gain the Extra Attack feature with your Unarmed Strikes. Additionally, you may make an Unarmed Strike as a Bonus Action by expending a Planar Point."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Elemental Mage",
+					"entries": [
+						"You gain the ability to convert your Planar energy into fuel for your magic. Upon taking a Short Rest, you may expend Planar Points equal to two times the level of a spell slot that you have expended to restore that spell slot. You can do this as many times as you like during the rest, however once the Rest ends you will not be able to use this feature again until you finish a Long Rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Elemental Archer",
+					"entries": [
+						"You gain the Extra Attack feature with your mastered weapon. Additionally, as a Bonus Action you may expend a Planar Point to lock onto your target, granting Advantage on your next attack against that target."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Elemental Blade",
+					"entries": [
+						"You gain the Extra Attack feature with your mastered weapon. Additionally, you may expend a Planar Point to cast the Soaring Shear spell without expending a spell slot. When cast this way, you can replace one of your attacks with the casting of the spell, and additionally the spell will deal damage of your Elemental Damage type if you have one."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Harmony",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 9,
+			"entries": [
+				"You gain resistance to your Elemental Damage Type. If you have more than one Elemental Damage Type, you gain resistance to two of them."
+			]
+		},
+		{
+			"name": "Intermediary",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 10,
+			"entries": [
+				"As a Magic Action, you can close your eyes and envision an area on your elemental plane. You will see and hear an accurate representation of what is going on there, and people around where you are looking will be able to feel your presence. You can do this for up to a minute, holding Concentration on it as if casting a spell.",
+				"Once you use this feature, you cannot do so again until you finish a Long Rest."
+			]
+		},
+		{
+			"name": "Elemental Aberrations",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 14,
+			"entries": [
+				"Your prowess and planar connection have advanced to the point where your quirks become more extreme. Each of your Elemental Quirks receives the Aberrant Upgrade listed in its description, and whenever you gain an Elemental Quirk you also receive the Aberrant Upgrade listed in its description."
+			]
+		},
+		{
+			"name": "True Intermediary",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 17,
+			"entries": [
+				"You gain the ability to cast the Plane Shift spell to go to your elemental plane. Once you use this feature, you cannot do so again until you finish a Long Rest.",
+				"Additionally, with 250 GP of materials and a day of work, you may craft a rod usable as a material component for the Plane Shift spell attuned to your material plane. This item will count as a Rod usable as an Arcane Focus for your Medium spells."
+			]
+		},
+		{
+			"name": "One With The Element",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 18,
+			"entries": [
+				"You gain immunity to your Elemental Damage Type. If you have more than one Elemental Damage Type, you gain immunity to two of them. Additionally, you ignore Resistance to your Elemental Damage Type(s)."
+			]
+		},
+		{
+			"name": "True Elemental",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 20,
+			"entries": [
+				"You become a true elemental being. You gain the following benefits.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Kin",
+							"entries": [
+								"You become an Elemental, in addition to any other creature types you have, and gain the ability to change your appearance to a more elemental one at will. You also know Primordial, and other Elementals will see you as kin, or if their CR is below 20, as a superior."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Ally Assist",
+							"entries": [
+								"You always have the Summon Elemental spell prepared, and can cast it without expending a spell slot or using Material components. When cast this way, the spell only lasts one minute and does not require Concentration. You cannot cast it this way again until you finish a Long Rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "RomansSillyHomebrew",
+			"page": 120,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 4,
+			"entries": [
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify. You gain this feature again at Medium levels 8, 12, and 16."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "RomansSillyHomebrew",
+			"page": 120,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 8,
+			"entries": [
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "RomansSillyHomebrew",
+			"page": 120,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 12,
+			"entries": [
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "RomansSillyHomebrew",
+			"page": 120,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 16,
+			"entries": [
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify."
+			]
+		},
+		{
+			"name": "Epic Boon",
+			"source": "RomansSillyHomebrew",
+			"page": 121,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 19,
+			"entries": [
+				"You gain an {@filter Epic Boon feat|feats|category=EB} or another {@5etools feat|feats.html} of your choice for which you qualify."
+			]
+		},
+		{
+			"name": "Medium Subclass",
+			"source": "RomansSillyHomebrew",
+			"page": 120,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"You gain a Medium subclass of your choice. A subclass is a specialization that grants you features at certain Medium levels. For the rest of your career, you gain each of your subclass's features that are of your Medium level or lower."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "RomansSillyHomebrew",
+			"page": 121,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 7,
+			"entries": [
+				"You gain a feature from your Medium Subclass."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "RomansSillyHomebrew",
+			"page": 121,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 11,
+			"entries": [
+				"You gain a feature from your Medium Subclass."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "RomansSillyHomebrew",
+			"page": 121,
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"level": 15,
+			"entries": [
+				"You gain a feature from your Medium Subclass."
+			]
+		}
+	],
+	"subclass": [
+		{
+			"name": "Pyromancer",
+			"shortName": "Pyromancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Pyromancer|Medium|RomansSillyHomebrew|Pyromancer|RomansSillyHomebrew|3",
+				"Blistering Aura|Medium|RomansSillyHomebrew|Pyromancer|RomansSillyHomebrew|7",
+				"Debilitating Flames|Medium|RomansSillyHomebrew|Pyromancer|RomansSillyHomebrew|11",
+				"Pyromaniac|Medium|RomansSillyHomebrew|Pyromancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Magmamancer",
+			"shortName": "Magmamancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Magmamancer|Medium|RomansSillyHomebrew|Magmamancer|RomansSillyHomebrew|3",
+				"Trap Options|Medium|RomansSillyHomebrew|Magmamancer|RomansSillyHomebrew|7",
+				"Vexatious Magma|Medium|RomansSillyHomebrew|Magmamancer|RomansSillyHomebrew|11",
+				"Fountains of Creation|Medium|RomansSillyHomebrew|Magmamancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aeromancer",
+			"shortName": "Aeromancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Aeromancer|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|3",
+				"Raging Tempest|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|7",
+				"Passive Winds|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|11",
+				"Windbreak|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|11",
+				"Galespeed Reactions|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tephramancer",
+			"shortName": "Tephramancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Tephramancer|Medium|RomansSillyHomebrew|Tephramancer|RomansSillyHomebrew|3",
+				"Blistering Aura|Medium|RomansSillyHomebrew|Tephramancer|RomansSillyHomebrew|7",
+				"Debilitating Flames|Medium|RomansSillyHomebrew|Tephramancer|RomansSillyHomebrew|11",
+				"The Great Conflagration|Medium|RomansSillyHomebrew|Tephramancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aquamancer",
+			"shortName": "Aquamancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Aquamancer|Medium|RomansSillyHomebrew|Aquamancer|RomansSillyHomebrew|3",
+				"Blistering Aura|Medium|RomansSillyHomebrew|Aquamancer|RomansSillyHomebrew|7",
+				"Debilitating Flames|Medium|RomansSillyHomebrew|Aquamancer|RomansSillyHomebrew|11",
+				"Pyromaniac|Medium|RomansSillyHomebrew|Aquamancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cryomancer",
+			"shortName": "Cryomancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Cryomancer|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|3",
+				"Blistering Aura|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|7",
+				"Debilitating Flames|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|11",
+				"Frostfall|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Laspimancer",
+			"shortName": "Laspimancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Laspimancer|Medium|RomansSillyHomebrew|Laspimancer|RomansSillyHomebrew|3",
+				"Blistering Aura|Medium|RomansSillyHomebrew|Laspimancer|RomansSillyHomebrew|7",
+				"Debilitating Flames|Medium|RomansSillyHomebrew|Laspimancer|RomansSillyHomebrew|11",
+				"Swamp of Oblivion|Medium|RomansSillyHomebrew|Laspimancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geomancer",
+			"shortName": "Geomancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Geomancer|Medium|RomansSillyHomebrew|Geomancer|RomansSillyHomebrew|3",
+				"Blistering Aura|Medium|RomansSillyHomebrew|Geomancer|RomansSillyHomebrew|7",
+				"Debilitating Flames|Medium|RomansSillyHomebrew|Geomancer|RomansSillyHomebrew|11",
+				"Pyromaniac|Medium|RomansSillyHomebrew|Geomancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Javamancer",
+			"shortName": "Javamancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"edition": "one",
+			"subclassFeatures": [
+				"Javamancer|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|3",
+				"Cooler Coffee|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|7",
+				"Excellent Java|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|11",
+				"Ethereal Espresso|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|15"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Pyromancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Pyromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"{@i Scorch Foes with Elemental Flame}",
+				"You have a special connection with the Elemental Plane of Fire, your heart always aflame and showing through in your magic. Pyromancers tend to have firey personalities, perhaps not the most rational and tending towards violence. Nonetheless, you rarely meet a foe who can withstand your flames.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Damage Type|Medium|RomansSillyHomebrew|Pyromancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Planar Burn|Medium|RomansSillyHomebrew|Pyromancer|RomansSillyHomebrew|3"
+				}
+			]
+		},
+		{
+			"name": "Planar Burn",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Pyromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your fire is quite potent, and can inflict a bit more damage than just the singing of normal fire spells. When you deal Fire damage to a creature or object, you can expend a Planar Point for it to start burning the creature hit by it. You may also cause an object that was hit by your Fire to start burning without expending a Planar Point unless it is being worn or carried. Burning caused by this feature will end naturally after an amount of turns equal to your Wisdom modifier, or if you become Incapacitated."
+			]
+		},
+		{
+			"name": "Blistering Aura",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Pyromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"As a Magic Action you can expend three Planar Points to cover yourself in an aura of fire for an amount of turns equal to your Wisdom modifier or until you gain the Incapacitated condition. During this time you gain the following benefits.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Flame Emanation",
+							"entries": [
+								"You have a 5-foot Emanation of fire originating from you. Creatures that start their turn in this aura have to make a Constitution saving throw or take 2d6 Fire damage on a failed save, and half as much on a successful one."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Intimidating Presence",
+							"entries": [
+								"You have Advantage on Charisma (Intimidation) checks, and as a Bonus Action you can glare at a creature. The creature will make a Wisdom saving throw or have the Frightened condition until the start of your next turn on a failed save."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Corporal Scorch",
+							"entries": [
+								"Creatures or objects burning from your Planar Burn will take 1d8 Fire damage at the start of their turns instead of 1d4."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Debilitating Flames",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Pyromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"Your flames burn with a dark ferocity, paining those afflicted to the point that they find it hard to focus on defense. When a creature suffering from your Burning is targeted by an Attack Roll, they must make a Constitution Saving Throw. Upon a failed save, the attack roll gains Advantage."
+			]
+		},
+		{
+			"name": "Pyromaniac",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Pyromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"You delight in watching things burn, and will spread your flames as much as possible. When you cause a creature or object to start burning with your Planar Burn, creatures within 5 feet of it must make a Constitution Saving Throw. Upon a failed save, the creature begins burning as if by your Planar Burn feature."
+			]
+		},
+		{
+			"name": "Aeromancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"{@i Turn Fate with Powerful Winds}",
+				"You are connected to the Elemental Plane of Air, channeling planar winds to change the outcomes of battle and react with the speed of the wind. Aeromancers come in many different varieties, however often taking more passive approaches in combat while subtly tipping the tides of battle.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Damage Type|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fortuitous Zephyr|Medium|RomansSillyHomebrew|Aeromancer|RomansSillyHomebrew|3"
+				}
+			]
+		},
+		{
+			"name": "Fortuitous Zephyr",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"You can generate winds to aid or disrupt your allies and enemies in battle, swaying the odds of the fight. When you see a creature make an Attack Roll or Saving Throw, you can take a Reaction to expend a Planar Point and impose Advantage or Disadvantage on the roll."
+			]
+		},
+		{
+			"name": "Raging Tempest",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Conjuring chaotic energies from the Plane of Air, you can create a small tempest to send foes flying. As a Magic Action, you may expend a Planar Point to create a tempest at a point within 30 feet. This tempest will last until the end of your next turn. This tempest has a radius of 5 feet and a height of 20 feet. When a creature enters the tempest or ends their turn in it, they will be launched up to the top of the tempest, and be sent an additional amount of feet in the air equal to two times your Wisdom modifier. If this causes the target to hit a ceiling or other obstacle, they will take Bludgeoning damage equal to two times your Wisdom modifier before falling.",
+				"You may take a Bonus Action on later turns to expend a Planar Point and prolong the tempest for another round."
+			]
+		},
+		{
+			"name": "Passive Winds",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"You can use Fortuitous Zephyr without expending a Planar Point if the creature making the roll is within 5 feet of you."
+			]
+		},
+		{
+			"name": "Windbreak",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"You have resistance to Bludgeoning damage induced by falling."
+			]
+		},
+		{
+			"name": "Galespeed Reactions",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"If you meet the trigger for a Reaction but have already taken one, you may expend a Planar Point to take another. You can only do this once per turn. For each time you do this, the cost to do so increases by one Planar Point. The cost resets to one at the start of your next turn."
+			]
+		},
+		{
+			"name": "Magmamancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Magmamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"{@i Crack the Earth with Broiling Heat}",
+				"Magmamancers sit on the boundries between Earth and Fire, combining the stability of Earth with the chaos of flame to create new environments and melt foes. Magmamancers often have a stark and stable determination to do whatever it takes to accomplish their goals, and don't let any obstacles come in their way.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Damage Type|Medium|RomansSillyHomebrew|Magmamancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Volcanic Trap|Medium|RomansSillyHomebrew|Magmamancer|RomansSillyHomebrew|3"
+				}
+			]
+		},
+		{
+			"name": "Volcanic Trap",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Magmamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"During your movement, if you are in contact with the ground, you can take a Magic action and expend a Planar Point to cause the following effects.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Trapped Spot",
+							"entries": [
+								"The 5 by 5 foot area in which you expended the Planar Point on the ground will become trapped. Any creature that is size Medium or smaller who touches the ground in this area will trigger the trap, and risk falling into it."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Magma Pit",
+							"entries": [
+								"Upon triggering into this trap, a creature can make a Dexterity saving throw against your Spell Save DC to attempt to avoid falling in. On a failed save, the creature falls into the trap, takes an amount of Fire damage equal to your Wisdom modifier, and gains the Restrained condition. This prevents any other creatures from being able to trigger the trap. Otherwise, the creature only takes the damage."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Escape",
+							"entries": [
+								"A creature restrained by the Volcanic Trap can take an Action to make a Strength (Athletics) or Dexterity (Acrobatics) check against your spell save DC, ending the condition on itself on a success."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Lifespan",
+							"entries": [
+								"If the trap is not triggered for an amount of turns equal to your Wisdom modifier, then it will naturally be destroyed. The trap will also be destroyed if a creature passes the saving throw to avoid falling in or if they pass the saving throw to escape."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trap Options",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Magmamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"When you place a Volcanic Trap, you can choose one of the following effects to apply to it.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Greater Trap",
+							"entries": [
+								"Your Volcanic Trap encompasses a 10 by 10 foot area, centered in the spot you placed it. Additionally, Large creatures can fall into the trap."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Quick Trap",
+							"entries": [
+								"You make the Volcanic Trap as a Bonus Action."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tricky Trap",
+							"entries": [
+								"he DC to avoid being trapped or to escape the trap increases by half your Proficiency Bonus (round up)."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Subtle Trap",
+							"entries": [
+								"Unless a creature has Tremorsense, Truesight, or another ability that would allow them to see through illusions or into the ground, it will be unable to notice the trap being placed or it after it has been placed."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vexatious Magma",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Magmamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"When you place a Volcanic Trap, you can expend a Planar Point to add another effect from the Trap Options. This effect cannot be the same as the other applied.",
+				"Additionally, you also gain the following additional Trap Options effects.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Boiling Trap",
+							"entries": [
+								"When a creature triggers your trap, it takes an additional 2d6 initial Fire damage on a failed save, and takes half as much on a success."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Ranged Trap",
+							"entries": [
+								"You can place your trap on an area of ground that you can see within 30 feet."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Crushing Trap",
+							"entries": [
+								"When a creature triggers your trap, it takes an additional 2d6 initial Bludgeoning damage on a failed save, and takes half as much on a success."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fountains of Creation",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Magmamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"WIP"
+			]
+		},
+		{
+			"name": "Javamancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"{@i Turn Fate with Powerful Winds}",
+				"You are connected to the Elemental Plane of Air, channeling planar winds to change the outcomes of battle and react with the speed of the wind. Aeromancers come in many different varieties, however often taking more passive approaches in combat while subtly tipping the tides of battle.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Damage Type|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Coffee Creation|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Energy Surplus|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Javamancer Spells|Medium|RomansSillyHomebrew|Javamancer|RomansSillyHomebrew|3"
+				}
+			]
+		},
+		{
+			"name": "Coffee Creation",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"As a Magic Action, you can conjure up to 8oz of coffee from your hands. This coffee may be either hot or cold, and has no added ingredients such as milk or sugar. This coffee will disappear after one hour if not consumed.",
+				"If in a small container, a creature can take a Utilize action to drink the coffee. Upon consuming at least 8oz of this coffee, a creature will gain an amount of Temporary Hit Points equal to your Wisdom modifier."
+			]
+		},
+		{
+			"name": "Energy Surplus",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"As a Bonus Action, you can take your surplus energy to increase your capabilities. You can choose to sacrifice an amount of Temporary Hit Points up to your Wisdom modifier. You lose these Temporary Hit Points, but gain an amount of Armor Class equal to the amount sacrificed until the start of your next turn."
+			]
+		},
+		{
+			"name": "Javamancer Spells",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"The Plane of Coffee has slightly different behaviors to that of the other elemental planes, allowing you to cast some spells that other Mediums cannot.",
+				"When you reach a Medium level specified in the Javamancer Spells Table, you thereafter have the ability to cast the listed spells as a Medium spell without expending a spell slot by expending Planar Points equal to two times the spell's level.",
+				{
+					"type": "table",
+					"caption": "Javamancer Spells",
+					"colLabels": [
+						"Medium Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell Cure Wounds|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell Aid|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell Haste|XPHB}"
+						],
+						[
+							"13th",
+							"{@spell Freedom of Movement|XPHB}"
+						],
+						[
+							"17th",
+							"{@spell Greater Restoration|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Cooler Coffee",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"When you use your Coffee Creation ability you can choose one of the following effects to apply to the coffee.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Concentrated",
+							"entries": [
+								"The coffee will grant Temporary Hit Points equal to two times your Wisdom modifier."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Light",
+							"entries": [
+								"The coffee can be drank as a Bonus Action."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Umbral",
+							"entries": [
+								"After drinking the coffee the creature gains 30 feet of Darkvision for one minute."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Lasting",
+							"entries": [
+								"The coffee lasts 12 hours."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Excellent Java",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"When you use Coffee Creation, you can expend a Planar Point to add another effect from the Cooler Coffee options. This effect cannot be the same as the other applied.",
+				"Additionally, you gain the following Cooler Coffee effects.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Concentrated",
+							"entries": [
+								"The coffee will grant Temporary Hit Points equal to two times your Wisdom modifier."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Light",
+							"entries": [
+								"The coffee can be drank as a Bonus Action."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Umbral",
+							"entries": [
+								"After drinking the coffee the creature gains 30 feet of Darkvision for one minute."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Lasting",
+							"entries": [
+								"The coffee lasts 12 hours."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ethereal Espresso",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"WIP"
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Pyromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Type is Fire."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Magmamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Types are Bludgeoning and Fire. When you are going to deal damage with your Elemental Damage Type, choose Bludgeoning or Fire."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aeromancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Type is Thunder."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Geomancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Type is Bludgeoning."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Aquamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Type is Cold."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Cryomancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Type is Cold."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Laspimancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Type is Acid."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Tephramancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Types are Cold and Fire. When you are going to deal damage with your Elemental Damage Type, choose Cold or Fire."
+			]
+		},
+		{
+			"name": "Elemental Damage Type",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Javamancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Your Elemental Damage Types are Cold and Fire. When you are going to deal damage with your Elemental Damage Type, choose Cold or Fire."
+			]
+		}
+	]
+}
