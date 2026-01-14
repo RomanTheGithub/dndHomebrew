@@ -159,6 +159,33 @@
 			]
 		}
 	],
+	"item": [
+		{
+			"name": "Soul-Reading Rapier",
+			"source": "RomansSillyHomebrew",
+			"rarity": "rare",
+			"reqAttune": true,
+			"entries": [
+				"Upon landing an attack roll against a target with this rapier, you can cast an instantaneous version of the \"Read Thoughts\" action from the spell {@spell Detect Thoughts|XPHB}, with the target being the creature hit by the rapier. You can attempt to probe deeper as a Bonus Action on the turn you use this feature.",
+				"This feature can only be used once per turn, and the spell is cast without the use of any Verbal, Somatic, or Material components, and without expending a spell slot."
+			],
+			"attachedSpells": [
+				"detect thoughts"
+			],
+			"baseItem": "rapier|xphb",
+			"type": "M|XPHB",
+			"weight": 2,
+			"weaponCategory": "martial",
+			"property": [
+				"F|XPHB"
+			],
+			"mastery": [
+				"Vex|XPHB"
+			],
+			"dmg1": "1d8",
+			"dmgType": "P"
+		}
+	],
 	"optionalfeature": [
 		{
 			"name": "Elemental Body",
