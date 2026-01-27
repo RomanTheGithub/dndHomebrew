@@ -9,7 +9,8 @@
 				"full": "Roman's Silly Homebrew",
 				"version": "1.0.0",
 				"authors": [
-					"Romanum"
+					"Romanum",
+					"Brûlée"
 				],
 				"convertedBy": [
 					"Romanum"
@@ -157,6 +158,142 @@
 				"piercing",
 				"slashing"
 			]
+		},
+		{
+			"name": "Medical Missile",
+			"source": "RomansSillyHomebrew",
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You create three glowing darts of magical energy. Each dart strikes a creature of your choice that you can see within range. A dart restores {@dice 1d4 + 1} {@variantrule Hit Points|XPHB} to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Using a Higher-Level Spell Slot",
+					"entries": [
+						"The spell creates one more dart for each spell slot level above 1."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"HL"
+			],
+			"areaTags": [
+				"MT",
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "EFA"
+					},
+					{
+						"name": "Cleric",
+						"source": "XPHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Striking Statue",
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "EFA"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "XPHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "XPHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					},
+					{
+						"name": "Bard",
+						"source": "XPHB"
+					}
+				]
+			},
+			"entries": [
+				"You conjure a {@object Stone Warden|RomansSillyHomebrew} at a point you can see within range. Any creature within 5 feet of the statue must immediately use its {@variantrule Reaction|XPHB} to make an {@variantrule Opportunity Attack|XPHB} against the statue, if possible. Whenever a creature enters within 5 feet of the statue, it will also attempt to take an {@variantrule Opportunity Attack|XPHB} against it. A creature who has taken an {@variantrule Opportunity Attack|XPHB} against the statue cannot willingly move away from it until it is destroyed. The statue is instantly destroyed if the spell ends."
+			],
+			"source": "RomansSillyHomebrew",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a nazar"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Using a Higher-Level Spell Slot",
+					"entries": [
+						"Use the spell slot's level for the spell's level in the object's stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"SMN"
+			]
 		}
 	],
 	"item": [
@@ -184,6 +321,33 @@
 			],
 			"dmg1": "1d8",
 			"dmgType": "P"
+		}
+	],
+	"object": [
+		{
+			"name": "Stone Warden",
+			"source": "RomansSillyHomebrew",
+			"size": "M",
+			"objectType": "GEN",
+			"ac": {
+				"special": "13 + the spell's level"
+			},
+			"hp": {
+				"special": "20 + 10 for each spell level above 2"
+			},
+			"immune": [
+				"psychic",
+				"poison",
+				"necrotic"
+			],
+			"resist": [
+				"fire",
+				"piercing",
+				"slashing"
+			],
+			"entries": [
+				"{@note Created by {@spell Striking Statue|RomansSillyHomebrew}.}"
+			]
 		}
 	],
 	"optionalfeature": [
@@ -1370,7 +1534,7 @@
 			"classSource": "RomansSillyHomebrew",
 			"subclassShortName": "Pyromancer",
 			"subclassSource": "RomansSillyHomebrew",
-			"level": 3,
+			"level": 11,
 			"header": 2,
 			"entries": [
 				"Your flames burn with a dark ferocity, paining those afflicted to the point that they find it hard to focus on defense. When a creature suffering from your Burning is targeted by an Attack Roll, they must make a Constitution Saving Throw. Upon a failed save, the attack roll gains Advantage."
