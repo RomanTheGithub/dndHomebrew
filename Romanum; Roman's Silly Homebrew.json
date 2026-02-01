@@ -220,6 +220,60 @@
 			}
 		},
 		{
+			"name": "Capture",
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "sight"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "XPHB"
+					},
+					{
+						"name": "Bard",
+						"source": "XPHB"
+					}
+				]
+			},
+			"entries": [
+				"You take your hands and create a frame around one of your eyes, causing it to briefly light up and make a distinct clicking sound. This creates an image of what you see through that eye, without any special senses or visual impairments that you may have. Illusions can still be seen normally in the image. You then conjure a tiny sheet of {@object Paper|XPHB}, dissolvable by water, with a monochrome inken version of the image displayed on it.",
+				"If you do not have eyes, then a glowing eye will briefly appear on a part of your body (your choice) which will be used to capture the image."
+			],
+			"source": "RomansSillyHomebrew",
+			"meta": {
+				"ritual": true
+			},
+			"components": {
+				"s": true,
+				"m": "a piece of glass"
+			},
+			"miscTags": [
+				"SGT",
+				"LGT"
+			]
+		},
+		{
 			"name": "Striking Statue",
 			"level": 2,
 			"school": "C",
@@ -293,6 +347,215 @@
 				"SGT",
 				"SCL",
 				"SMN"
+			]
+		}
+	],
+	"feat": [
+		{
+			"name": "Strong Skin",
+			"category": "O",
+			"source": "RomansSillyHomebrew",
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Protective Body",
+					"entries": [
+						"You can use your Constitution modifier instead of your Dexterity modifier when determining your Armor Class while wearing armor."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Standing Defense",
+					"entries": [
+						"If you are unarmored your base Armor Class is equal to 10 plus your Constitution modifier."
+					]
+				}
+			]
+		},
+		{
+			"name": "Focused Dodge",
+			"category": "O",
+			"source": "RomansSillyHomebrew",
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Predictive Dodging",
+					"entries": [
+						"You can use your Wisdom modifier instead of your Dexterity modifier when determining your Armor Class while wearing armor."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Instinctive Dodge",
+					"entries": [
+						"If you are unarmored your base Armor Class is equal to 10 plus your Wisdom modifier."
+					]
+				}
+			]
+		},
+		{
+			"name": "Tactical Dodge",
+			"category": "O",
+			"source": "RomansSillyHomebrew",
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Analytically Armored",
+					"entries": [
+						"You can use your Intelligence modifier instead of your Intelligence modifier when determining your Armor Class while wearing armor."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tactician's Eye",
+					"entries": [
+						"If you are unarmored your base Armor Class is equal to 10 plus your Intelligence modifier."
+					]
+				}
+			]
+		},
+		{
+			"name": "Irritating",
+			"category": "O",
+			"source": "RomansSillyHomebrew",
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Painful Insults",
+					"entries": [
+						"You learn {@spell Vicious Mockery|XPHB}. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Quick Jeer",
+					"entries": [
+						"You can cast {@spell Vicious Mockery|XPHB} as a {@variantrule Bonus Action|XPHB}. You can do this amount of times equasl to your {@variantrule Proficiency|XPHB|Proficiency Bonus}, and regain all expended uses on a {@variantrule Long Rest|XPHB}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Arm",
+			"category": "G",
+			"source": "RomansSillyHomebrew",
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": ["Telekinetic|XPHB"]
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Ability Score Increase",
+					"entries": [
+						"Increase the same ability score increased by Telekinetic by 1, to a maximum of 20."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Telekinetic Limb",
+					"entries": [
+						"As a {@action Magic|XPHB} action, you can create a telekinetic hand for yourself. This counts as one of your hands for all purposes except using Two-Handed weaponry or performing spell components. This hand is completely invisible, and attacks made with it can use the ability score increased by this feat instead of your Strength score. This limb will last one minute or until you dispel it (no action required). Upon disappearing, anything being carried by the hand will be dropped. This limb is separate from your {@spell Mage Hand|XPHB}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Quick Mage Hand",
+					"entries": [
+						"You can cast your {@spell Mage Hand|XPHB} as a {@variantrule Bonus Action|XPHB}. Additionally, you can control {@spell Mage Hand|XPHB} again as a {@variantrule Bonus Action|XPHB} instead of a {@action Magic|XPHB} action."
+					]
+				}
+			]
+		},
+		{
+			"name": "Paladin Initiate",
+			"category": "G",
+			"source": "RomansSillyHomebrew",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Divine Oath",
+					"entries": [
+						"You have the spell {@spell Divine Smite|XPHB} always prepared. You can cast it once without expending a spell slot. Once you cast it this way, you can't do so again until you take a {@variantrule Long Rest|XPHB}. The spell's spellcasting ability is the ability increased by this feat."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Oath Initiate",
+					"entries": [
+						"Choose a {@class Paladin|XPHB} subclass that takes an oath and has certain spells always prepared. Choose one first level spell that is given by that subclass. You have this spell always prepared, and can cast it once without expending a spell slot. Once you cast it this way, you can't do so again until you take a {@variantrule Long Rest|XPHB}. The spell's spellcasting ability is the ability increased by this feat.",
+						"Additionally, choose one of that subclass' tenets. You become bound by that tenet, and breaking it functions like breaking a Paladin's oath, where you must seek absolution, or risk losing the benefits of this feat."
+					]
+				}
+			]
+		},
+		{
+			"name": "Motivating",
+			"category": "G",
+			"source": "RomansSillyHomebrew",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Helping Word",
+					"entries": [
+						"You always have the spell {@spell Healing Word|XPHB} prepared. You can cast this spell once without expending a spell slot. When you cast it this way, it grants the target a special motivation to persist. Attack rolls will have {@variantrule Disadvantage|XPHB} against it until the start of your next turn. Once you cast the spell in this way, you can't cast it in this way again until you finish a {@variantrule Long Rest|XPHB}. You can also cast the spells using spell slots you have of the appropriate level. The spell's spellcasting ability is the ability increased by this feat."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Quick Assist",
+					"entries": [
+						"You can take the {@action Help|XPHB} action as a {@variantrule Bonus Action|XPHB}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Opportunity Distract",
+					"entries": [
+						"You can take the {@action Help|XPHB} to distract an enemy instead of attacking them as part of an {@action Opportunity Attack|XPHB}."
+					]
+				}
 			]
 		}
 	],
@@ -445,7 +708,7 @@
 				"M:EQ"
 			],
 			"entries": [
-				"As a Bonus Action, you can conjure a weapon made out of your element. It must be a normally nonmagical weapon that you are proficient in, and must cost no more than 250 GP. This weapon deals the same damage type as your Elemental Damage Type if you have one. This conjured weapon will last until you drop it, or until you use this feature again.",
+				"As a {@variantrule Bonus Action|XPHB}, you can conjure a weapon made out of your element. It must be a normally nonmagical weapon that you are proficient in, and must cost no more than 250 GP. This weapon deals the same damage type as your Elemental Damage Type if you have one. This conjured weapon will last until you drop it, or until you use this feature again.",
 				"If the weapon has the thrown property, it will last until it hits an object after being thrown. If the weapon requires ammunition, you conjure it with an amount of ammunition ready equal to your Wisdom modifier.",
 				{
 					"type": "entries",
@@ -463,12 +726,12 @@
 				"M:EQ"
 			],
 			"entries": [
-				"As a Bonus Action you can gain 30 feet of Darkvision, or increase the range of your Darkvision by 30 if you already have it for a minute. Once you use this feasture, you cannot do so again until you finish a Long Rest.",
+				"As a {@variantrule Bonus Action|XPHB} you can gain 30 feet of Darkvision, or increase the range of your Darkvision by 30 if you already have it for a minute. Once you use this feasture, you cannot do so again until you finish a Long Rest.",
 				{
 					"type": "entries",
 					"name": "Aberrant Upgrade",
 					"entries": [
-						"You can cast See Invisibility as a Bonus Action without expending a spell slot or using material components, however it will only last a minute. Once you do this you cannot do so again until you finish a Long Rest."
+						"You can cast See Invisibility as a {@variantrule Bonus Action|XPHB} without expending a spell slot or using material components, however it will only last a minute. Once you do this you cannot do so again until you finish a Long Rest."
 					]
 				}
 			]
@@ -1108,7 +1371,7 @@
 					"type": "entries",
 					"name": "Corporal Elementalism",
 					"entries": [
-						"You gain the Extra Attack feature with your Unarmed Strikes. Additionally, you may make an Unarmed Strike as a Bonus Action by expending a Planar Point."
+						"You gain the Extra Attack feature with your Unarmed Strikes. Additionally, you may make an Unarmed Strike as a {@variantrule Bonus Action|XPHB} by expending a Planar Point."
 					]
 				},
 				{
@@ -1122,7 +1385,7 @@
 					"type": "entries",
 					"name": "Elemental Archer",
 					"entries": [
-						"You gain the Extra Attack feature with your mastered weapon. Additionally, as a Bonus Action you may expend a Planar Point to lock onto your target, granting Advantage on your next attack against that target."
+						"You gain the Extra Attack feature with your mastered weapon. Additionally, as a {@variantrule Bonus Action|XPHB} you may expend a Planar Point to lock onto your target, granting Advantage on your next attack against that target."
 					]
 				},
 				{
@@ -1513,7 +1776,7 @@
 							"type": "entries",
 							"name": "Intimidating Presence",
 							"entries": [
-								"You have Advantage on Charisma (Intimidation) checks, and as a Bonus Action you can glare at a creature. The creature will make a Wisdom saving throw or have the Frightened condition until the start of your next turn on a failed save."
+								"You have Advantage on Charisma (Intimidation) checks, and as a {@variantrule Bonus Action|XPHB} you can glare at a creature. The creature will make a Wisdom saving throw or have the Frightened condition until the start of your next turn on a failed save."
 							]
 						},
 						{
@@ -1598,7 +1861,7 @@
 			"header": 2,
 			"entries": [
 				"Conjuring chaotic energies from the Plane of Air, you can create a small tempest to send foes flying. As a Magic Action, you may expend a Planar Point to create a tempest at a point within 30 feet. This tempest will last until the end of your next turn. This tempest has a radius of 5 feet and a height of 20 feet. When a creature enters the tempest or ends their turn in it, they will be launched up to the top of the tempest, and be sent an additional amount of feet in the air equal to two times your Wisdom modifier. If this causes the target to hit a ceiling or other obstacle, they will take Bludgeoning damage equal to two times your Wisdom modifier before falling.",
-				"You may take a Bonus Action on later turns to expend a Planar Point and prolong the tempest for another round."
+				"You may take a {@variantrule Bonus Action|XPHB} on later turns to expend a Planar Point and prolong the tempest for another round."
 			]
 		},
 		{
@@ -1732,7 +1995,7 @@
 							"type": "entries",
 							"name": "Quick Trap",
 							"entries": [
-								"You make the Volcanic Trap as a Bonus Action."
+								"You make the Volcanic Trap as a {@variantrule Bonus Action|XPHB}."
 							]
 						},
 						{
@@ -1859,7 +2122,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"As a Bonus Action, you can take your surplus energy to increase your capabilities. You can choose to sacrifice an amount of Temporary Hit Points up to your Wisdom modifier. You lose these Temporary Hit Points, but gain an amount of Armor Class equal to the amount sacrificed until the start of your next turn."
+				"As a {@variantrule Bonus Action|XPHB}, you can take your surplus energy to increase your capabilities. You can choose to sacrifice an amount of Temporary Hit Points up to your Wisdom modifier. You lose these Temporary Hit Points, but gain an amount of Armor Class equal to the amount sacrificed until the start of your next turn."
 			]
 		},
 		{
@@ -1935,7 +2198,7 @@
 							"type": "entries",
 							"name": "Light",
 							"entries": [
-								"The coffee can be drank as a Bonus Action."
+								"The coffee can be drank as a {@variantrule Bonus Action|XPHB}."
 							]
 						},
 						{
@@ -1982,7 +2245,7 @@
 							"type": "entries",
 							"name": "Light",
 							"entries": [
-								"The coffee can be drank as a Bonus Action."
+								"The coffee can be drank as a {@variantrule Bonus Action|XPHB}."
 							]
 						},
 						{
