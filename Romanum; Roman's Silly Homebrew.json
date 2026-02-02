@@ -811,6 +811,23 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Planar Blast",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"You can cast {@spell Eldritch Blast|XPHB} as a Medium spell. When cast this way, its damage type will be Bludgeoning or your Elemental Damage Type (if you have one).",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"You can add your spellcasting ability modifier to the damage of your {@spell Eldritch Blast|XPHB} cast by this feature."
+					]
+				}
+			]
 		}
 	],
 	"class": [
@@ -1510,7 +1527,7 @@
 					"type": "entries",
 					"name": "Elemental Mage",
 					"entries": [
-						"You focus on the magic of your element, opting to fight with spellcasting rather than weaponry. You learn Elementalism, along with two other damaging Sorcerer cantrips of your choice. The chosen cantrips count as Medium cantrips for you, and each time you gain a level you can replace one of these cantrips with another Sorcerer cantrip."
+						"You focus on the magic of your element, opting to fight with spellcasting rather than weaponry. You learn Elementalism, along with two other damaging Sorcerer cantrips of your choice. The chosen cantrips count as Medium cantrips for you, and each time you gain a Medium level you can replace one of these cantrips with another Sorcerer cantrip."
 					]
 				},
 				{
