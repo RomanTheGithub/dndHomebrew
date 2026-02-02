@@ -557,6 +557,46 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Warding Mage",
+			"category": "G",
+			"source": "RomansSillyHomebrew",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Shielding Mage",
+					"entries": [
+						"You always have the spell {@spell Shield|XPHB} prepared. You can cast this spell once without expending a spell slot. Once you cast the spell in this way, you can't cast it in this way again until you finish a {@variantrule Long Rest|XPHB}. You can also cast the spells using any spell slots you have. The spell's spellcasting ability is the ability increased by this feat."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Shared Protection",
+					"entries": [
+						"When you cast an {@filter Abjuration spell with a range of Self|spells|school=A|range=self}, you can change the target from yourself to a willing creature within 30 feet of you.",
+						"Additionally, if a spell would allow its target to be changed by this feature and has a casting time of a {@variantrule Reaction|XPHB}, then you can cast it in reaction to an applicable target meeting the conditions instead of yourself, changing the target to that creature.",
+						"You can use this feature an amount of times equal to your {@variantrule Proficiency|XPHB|Proficiency Bonus}, and regain all expended uses on a {@variantrule Long Rest|XPHB}"
+					]
+				}
+			]
 		}
 	],
 	"item": [
@@ -621,12 +661,12 @@
 				"M:EQ"
 			],
 			"entries": [
-				"Your body is partially made of your element, and thus may behave in unusual ways. When you get hit by an attack roll, you may take a reaction to attempt to have the attack phase through your body as it impacts your element instead of you. Your AC increases by an amount equal to your Wisdom modifier against the triggering attack, potentially causing it to miss. You can use this feature an amount of times equal to your Wisdom modifier, and regain all expended uses on a Long Rest.",
+				"Your body is partially made of your element, and thus may behave in unusual ways. When you get hit by an attack roll, you may take a {@variantrule Reaction|XPHB} to attempt to have the attack phase through your body as it impacts your element instead of you. Your AC increases by an amount equal to your Wisdom modifier against the triggering attack, potentially causing it to miss. You can use this feature an amount of times equal to your Wisdom modifier, and regain all expended uses on a Long Rest.",
 				{
 					"type": "entries",
 					"name": "Aberrant Upgrade",
 					"entries": [
-						"The elemental nature of your body becomes so attuned that it almost automatically reacts to incoming attacks. Using this feature no longer takes a reaction."
+						"The elemental nature of your body becomes so attuned that it almost automatically reacts to incoming attacks. Using this feature no longer takes a {@variantrule Reaction|XPHB}."
 					]
 				}
 			]
@@ -1847,7 +1887,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"You can generate winds to aid or disrupt your allies and enemies in battle, swaying the odds of the fight. When you see a creature make an Attack Roll or Saving Throw, you can take a Reaction to expend a Planar Point and impose Advantage or Disadvantage on the roll."
+				"You can generate winds to aid or disrupt your allies and enemies in battle, swaying the odds of the fight. When you see a creature make an Attack Roll or Saving Throw, you can take a {@variantrule Reaction|XPHB} to expend a Planar Point and impose Advantage or Disadvantage on the roll."
 			]
 		},
 		{
@@ -1900,7 +1940,7 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"If you meet the trigger for a Reaction but have already taken one, you may expend a Planar Point to take another. You can only do this once per turn. For each time you do this, the cost to do so increases by one Planar Point. The cost resets to one at the start of your next turn."
+				"If you meet the trigger for a {@variantrule Reaction|XPHB} but have already taken one, you may expend a Planar Point to take another. You can only do this once per turn. For each time you do this, the cost to do so increases by one Planar Point. The cost resets to one at the start of your next turn."
 			]
 		},
 		{
