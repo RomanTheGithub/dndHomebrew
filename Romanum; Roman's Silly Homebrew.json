@@ -909,13 +909,13 @@
 						],
 						"B": [
 							{
-								"value": 15000
+								"value": 14500
 							}
 						]
 					}
 				],
 				"entries": [
-					"{@i Choose A or B:} (A) ; or (B) (wip)"
+					"{@i Choose A or B:} (A) (wip); or (B) 145 GP"
 				]
 			},
 			"multiclassing": {
@@ -994,6 +994,73 @@
 						],
 						[
 							5
+						]
+					]
+				},
+				{
+					"colLabels": [
+						"Planar Points"
+					],
+					"rows": [
+						[
+							0
+						],
+						[
+							0
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							8
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							12
+						],
+						[
+							13
+						],
+						[
+							14
+						],
+						[
+							15
+						],
+						[
+							16
+						],
+						[
+							17
+						],
+						[
+							18
+						],
+						[
+							19
+						],
+						[
+							20
 						]
 					]
 				},
@@ -1254,7 +1321,93 @@
 			],
 			"subclassTitle": "Medium Subclass",
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classSpells": [
+				"Burning Hands",
+				"Chromatic Orb",
+				"Color Spray",
+				"Detect Magic",
+				"Disguise Self",
+				"Expeditious Retreat",
+				"Faerie Fire",
+				"False Life",
+				"Feather Fall",
+				"Fog Cloud",
+				"Grease",
+				"Ice Knife",
+				"Illusory Script",
+				"Jump",
+				"Longstrider",
+				"Mage Armor",
+				"Ray of Sickness",
+				"Shield",
+				"Tenser's Floating Disk",
+				"Thunderwave",
+				"Witch Bolt",
+				"Alter Self",
+				"Arcane Vigor",
+				"Blindness/Deafness",
+				"Blur",
+				"Dragon's Breath",
+				"Flame Blade",
+				"Flaming Sphere",
+				"Gust of Wind",
+				"Heat Metal",
+				"Hold Person",
+				"Knock",
+				"Levitate",
+				"Magic Weapon",
+				"Melf's Acid Arrow",
+				"Mirror Image",
+				"Misty Step",
+				"Scorching Ray",
+				"Shatter",
+				"Spider Climb",
+				"Web",
+				"Blink",
+				"Clairvoyance",
+				"Counterspell",
+				"Dispel Magic",
+				"Elemental Weapon",
+				"Fear",
+				"Fireball",
+				"Fly",
+				"Gaseous Form",
+				"Leomund's Tiny Hut",
+				"Lightning Arrow",
+				"Lightning Bolt",
+				"Phantom Steed",
+				"Protection from Energy",
+				"Sleet Storm",
+				"Stinking Cloud",
+				"Water Walk",
+				"Wind Wall",
+				"Arcane Eye",
+				"Banishment",
+				"Confusion",
+				"Conjure Minor Elementals",
+				"Dimension Door",
+				"Divination",
+				"Fire Shield",
+				"Hallucinatory Terrain",
+				"Ice Storm",
+				"Leomund's Secret Chest",
+				"Stoneskin",
+				"Summon Elemental",
+				"Vitriolic Sphere",
+				"Wall of Fire",
+				"Cone of Cold",
+				"Conjure Elemental",
+				"Contact Other Plane",
+				"Jallarzi's Storm of Radiance",
+				"Mislead",
+				"Planar Binding",
+				"Scrying",
+				"Seeming",
+				"Telekinesis",
+				"Teleportation Circle",
+				"Wall of Stone"
+			]
 		}
 	],
 	"classFluff": [
