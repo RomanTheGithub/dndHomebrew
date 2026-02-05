@@ -55,7 +55,7 @@
 				}
 			],
 			"entries": [
-				"You forsee a creature stumbling in their path as they pass you. The creature that provoked the Opportunity Attack makes a Dexterity Saving Throw, gaining the {@condition Prone|XPHB} condition on a failed save."
+				"You forsee a creature stumbling in their path as it passes you. The creature that provoked the Opportunity Attack makes a Dexterity Saving Throw, gaining the {@condition Prone|XPHB} condition on a failed save."
 			],
 			"classes": {
 				"fromClassList": [
@@ -157,6 +157,76 @@
 				"bludgeoning",
 				"piercing",
 				"slashing"
+			]
+		},
+		{
+			"name": "Flame Fortune",
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					},
+					{
+						"name": "Druid",
+						"source": "XPHB"
+					},
+					{
+						"name": "Medium",
+						"source": "RomansSillyHomebrew"
+					}
+				]
+			},
+			"source": "RomansSillyHomebrew",
+			"meta": {
+				"ritual": true
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pinch of salt"
+			},
+			"miscTags": [
+				"SGT"
+			],
+			"entries": [
+				"You conjure a flame showcasing the fate of a creature you point towards within range. For the duration if the creature rolls a 19 to 20 on a {@variantrule D20 Test|XPHB}, it will count as a 20 and the spell will end. Additionally, if the creature rolls a 1 to 2 on a  {@variantrule D20 Test|XPHB}, it will count as a 1 and the spell will end."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Using a Higher-Level Spell Slot",
+					"entries": [
+						"The spell's duration increases with higher levels. With a spell slot of level 2 it lasts 1 hour, 3-4 it lasts 8 hours, and 5+ it lasts 24 hours."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -553,7 +623,7 @@
 					"type": "entries",
 					"name": "Opportunity Distract",
 					"entries": [
-						"You can take the {@action Help|XPHB} to distract an enemy instead of attacking them as part of an {@action Opportunity Attack|XPHB}."
+						"You can take the {@action Help|XPHB} to distract an enemy instead of attacking it as part of an {@action Opportunity Attack|XPHB}."
 					]
 				}
 			]
@@ -591,7 +661,7 @@
 					"type": "entries",
 					"name": "Shared Protection",
 					"entries": [
-						"When you cast an {@filter Abjuration spell with a range of Self|spells|school=A|range=self}, you can change the target from yourself to a willing creature within 30 feet of you.",
+						"When you cast an {@filter Abjuration spell with a range of Self that does not have an |spells|school=A|range=self}{@variantrule Emanation [Area of Effect]|XPHB|Emanation}, you can change the target from yourself to a willing creature within 30 feet of you.",
 						"Additionally, if a spell would allow its target to be changed by this feature and has a casting time of a {@variantrule Reaction|XPHB}, then you can cast it in reaction to an applicable target meeting the conditions instead of yourself, changing the target to that creature.",
 						"You can use this feature an amount of times equal to your {@variantrule Proficiency|XPHB|Proficiency Bonus}, and regain all expended uses on a {@variantrule Long Rest|XPHB}"
 					]
@@ -630,7 +700,7 @@
 		{
 			"name": "Stone Warden",
 			"source": "RomansSillyHomebrew",
-			"size": "M",
+			"size": ["M"],
 			"objectType": "GEN",
 			"ac": {
 				"special": "13 + the spell's level"
@@ -661,7 +731,7 @@
 				"M:EQ"
 			],
 			"entries": [
-				"Your body is partially made of your element, and thus may behave in unusual ways. When you get hit by an attack roll, you may take a {@variantrule Reaction|XPHB} to attempt to have the attack phase through your body as it impacts your element instead of you. Your AC increases by an amount equal to your Wisdom modifier against the triggering attack, potentially causing it to miss. You can use this feature an amount of times equal to your Wisdom modifier, and regain all expended uses on a Long Rest.",
+				"Your body is partially made of your element, and thus may behave in unusual ways. When you get hit by an attack roll, you may take a {@variantrule Reaction|XPHB} to attempt to have the attack phase through your body as it impacts your element instead of you. Your AC increases by an amount equal to your spellcasting ability modifier against the triggering attack, potentially causing it to miss. You can use this feature an amount of times equal to your spellcasting ability modifier, and regain all expended uses on a Long Rest.",
 				{
 					"type": "entries",
 					"name": "Aberrant Upgrade",
@@ -748,8 +818,8 @@
 				"M:EQ"
 			],
 			"entries": [
-				"As a {@variantrule Bonus Action|XPHB}, you can conjure a weapon made out of your element. It must be a normally nonmagical weapon that you are proficient in, and must cost no more than 250 GP. This weapon deals the same damage type as your Elemental Damage Type if you have one. This conjured weapon will last until you drop it, or until you use this feature again.",
-				"If the weapon has the thrown property, it will last until it hits an object after being thrown. If the weapon requires ammunition, you conjure it with an amount of ammunition ready equal to your Wisdom modifier.",
+				"As a {@variantrule Bonus Action|XPHB}, you can conjure a weapon made out of your element. It must be a normally nonmagical Simple or Martial weapon that you are proficient in, and must not be Modern or Futuristic. This weapon deals the same damage type as your Elemental Damage Type if you have one. This conjured weapon will last until you drop it, or until you use this feature again.",
+				"If the weapon has the thrown property, it will last until it hits an object after being thrown. If the weapon requires ammunition, you conjure it with an amount of ammunition ready equal to your spellcasting ability modifier.",
 				{
 					"type": "entries",
 					"name": "Aberrant Upgrade",
@@ -766,12 +836,29 @@
 				"M:EQ"
 			],
 			"entries": [
-				"As a {@variantrule Bonus Action|XPHB} you can gain 30 feet of Darkvision, or increase the range of your Darkvision by 30 if you already have it for a minute. Once you use this feasture, you cannot do so again until you finish a Long Rest.",
+				"As a {@variantrule Bonus Action|XPHB} you gain 30 feet of Darkvision for a minute. If you already have Darkvision, your range instead increases by 30 feet. Once you use this feasture, you cannot do so again until you finish a Long Rest.",
 				{
 					"type": "entries",
 					"name": "Aberrant Upgrade",
 					"entries": [
-						"You can cast See Invisibility as a {@variantrule Bonus Action|XPHB} without expending a spell slot or using material components, however it will only last a minute. Once you do this you cannot do so again until you finish a Long Rest."
+						"You can cast See Invisibility as a {@variantrule Bonus Action|XPHB} without expending a spell slot or using material components. When cast this way the spell will only last 1 minute. Once you do this you cannot do so again until you finish a Long Rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Knowledge",
+			"source": "RomansSillyHomebrew",
+			"featureType": [
+				"M:EQ"
+			],
+			"entries": [
+				"You seem to have an ingrained connection to planar lore and knowledge. You can add your spellcasting ability modifier to Intelligence ({@skill Arcana|XPHB} and {@spell History|XPHB}) checks. In addition, if you do not have it already, you gain proficiency in {@skill Arcana|XPHB}.",
+				{
+					"type": "entries",
+					"name": "Aberrant Upgrade",
+					"entries": [
+						"Choose {@skill Arcana|XPHB} or {@skill History|XPHB}. You gain {@variantrule Expertise|XPHB} in the chosen skill."
 					]
 				}
 			]
@@ -783,7 +870,7 @@
 				"M:EQ"
 			],
 			"entries": [
-				"Your planar energy allows you to conjure an elemental ally. You can cast the Find Familiar spell without expending a spell slot. In addition, any familiar conjured this way has the following properties.",
+				"Your planar energy allows you to conjure an elemental ally. You can cast {@spell Find Familiar|XPHB} without expending a spell slot. In addition, any familiar conjured this way has the following properties.",
 				{
 					"type": "entries",
 					"entries": [
@@ -807,7 +894,7 @@
 					"type": "entries",
 					"name": "Aberrant Upgrade",
 					"entries": [
-						"A familiar conjured by this spell may take the Attack action, adding your Wisdom modifier to its attack and damage rolls. Additionally, when conjured it has additional maximum hit points equal to your Medium level."
+						"A familiar conjured by this spell may take the Attack action, adding your spellcasting ability modifier to its attack and damage rolls. Additionally, when conjured it has additional maximum hit points equal to your Medium level."
 					]
 				}
 			]
@@ -824,7 +911,7 @@
 					"type": "entries",
 					"name": "Aberrant Upgrade",
 					"entries": [
-						"You can add your spellcasting ability modifier to the damage of your {@spell Eldritch Blast|XPHB} cast by this feature."
+						"You can add your spellcasting ability modifier to the damage of an {@spell Eldritch Blast|XPHB} cast by this feature."
 					]
 				}
 			]
@@ -1520,7 +1607,7 @@
 					"type": "entries",
 					"name": "Corporal Elementalism",
 					"entries": [
-						"You fight infusing your element into your body. You may roll 1d6 in place of your normal damage for Unarmed Strikes, using your Wisdom modifier for the attack and damage rolls. Additionally once per turn after hitting an Unarmed Strike, you may infuse further elemental force into your blows, dealing an additional 1d4 damage of the same type (or, if you have one, your Elemental Damage Type). Your Unarmed Strike base damage increases to 1d8 when not wearing armor or a shield."
+						"You fight infusing your element into your body. You may roll 1d6 in place of your normal damage for Unarmed Strikes, using your spellcasting ability modifier for the attack and damage rolls. Additionally once per turn after hitting an Unarmed Strike, you may infuse further elemental force into your blows, dealing an additional 1d4 damage of the same type (or, if you have one, your Elemental Damage Type). Your Unarmed Strike base damage increases to 1d8 when not wearing armor or a shield."
 					]
 				},
 				{
@@ -1534,14 +1621,14 @@
 					"type": "entries",
 					"name": "Elemental Archer",
 					"entries": [
-						"You channel your element to guide your shots. Choose a weapon with which you can make ranged attacks that you have proficiency in. You gain the ability to use the mastery property of this weapon. Additionally, once per turn, you can add your Wisdom modifier to the attack roll of this weapon before knowing the outcome of the roll."
+						"You channel your element to guide your shots. Choose a weapon with which you can make ranged attacks that you have proficiency in. You gain the ability to use the mastery property of this weapon. Additionally, once per turn, you can add your spellcasting ability modifier to the attack roll of this weapon before knowing the outcome of the roll."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Elemental Blade",
 					"entries": [
-						"Your weapon is fueled by the power of your plane. Choose a melee weapon with which you have proficiency. You gain the ability to use the mastery property of this weapon. Additionally, once per turn after hitting a melee attack with this weapon, you can strike harder with the force of your element, dealing an amount of additional damage equal to your Wisdom modifier. This additional damage will be the same as your Elemental Damage Type if you have one, or be the same as the damage type of the weapon if you do not."
+						"Your weapon is fueled by the power of your plane. Choose a melee weapon with which you have proficiency. You gain the ability to use the mastery property of this weapon. Additionally, once per turn after hitting a melee attack with this weapon, you can strike harder with the force of your element, dealing an amount of additional damage equal to your spellcasting ability modifier. This additional damage will be the same as your Elemental Damage Type if you have one, or be the same as the damage type of the weapon if you do not."
 					]
 				},
 				"For any Elemental Styles that require you to choose a weapon to specialize in, you may change the weapon once every Long Rest."
@@ -1958,7 +2045,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Your fire is quite potent, and can inflict a bit more damage than just the singing of normal fire spells. When you deal Fire damage to a creature or object, you can expend a Planar Point for it to start burning the creature hit by it. You may also cause an object that was hit by your Fire to start burning without expending a Planar Point unless it is being worn or carried. Burning caused by this feature will end naturally after an amount of turns equal to your Wisdom modifier, or if you become Incapacitated."
+				"Your fire is quite potent, and can inflict a bit more damage than just the singing of normal fire spells. When you deal Fire damage to a creature or object, you can expend a Planar Point for it to start burning the creature hit by it. You may also cause an object that was hit by your Fire to start burning without expending a Planar Point unless it is being worn or carried. Burning caused by this feature will end naturally after an amount of turns equal to your spellcasting ability modifier, or if you become Incapacitated."
 			]
 		},
 		{
@@ -1971,7 +2058,7 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"As a Magic Action you can expend three Planar Points to cover yourself in an aura of fire for an amount of turns equal to your Wisdom modifier or until you gain the Incapacitated condition. During this time you gain the following benefits.",
+				"As a Magic Action you can expend three Planar Points to cover yourself in an aura of fire for an amount of turns equal to your spellcasting ability modifier or until you gain the Incapacitated condition. During this time you gain the following benefits.",
 				{
 					"type": "entries",
 					"entries": [
@@ -2010,7 +2097,7 @@
 			"level": 11,
 			"header": 2,
 			"entries": [
-				"Your flames burn with a dark ferocity, paining those afflicted to the point that they find it hard to focus on defense. When a creature suffering from your Burning is targeted by an Attack Roll, they must make a Constitution Saving Throw. Upon a failed save, the attack roll gains Advantage."
+				"Your flames burn with a dark ferocity, paining those afflicted to the point that they find it hard to focus on defense. When a creature suffering from your Burning is targeted by an Attack Roll, it must make a Constitution Saving Throw. Upon a failed save, the attack roll gains Advantage."
 			]
 		},
 		{
@@ -2070,7 +2157,7 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Conjuring chaotic energies from the Plane of Air, you can create a small tempest to send foes flying. As a Magic Action, you may expend a Planar Point to create a tempest at a point within 30 feet. This tempest will last until the end of your next turn. This tempest has a radius of 5 feet and a height of 20 feet. When a creature enters the tempest or ends their turn in it, they will be launched up to the top of the tempest, and be sent an additional amount of feet in the air equal to two times your Wisdom modifier. If this causes the target to hit a ceiling or other obstacle, they will take Bludgeoning damage equal to two times your Wisdom modifier before falling.",
+				"Conjuring chaotic energies from the Plane of Air, you can create a small tempest to send foes flying. As a Magic Action, you may expend a Planar Point to create a tempest at a point within 30 feet. This tempest will last until the end of your next turn. This tempest has a radius of 5 feet and a height of 20 feet. When a creature enters the tempest or ends their turn in it, it will be launched up to the top of the tempest, and be sent an additional amount of feet in the air equal to two times your spellcasting ability modifier. If this causes the target to hit a ceiling or other obstacle, it will take Bludgeoning damage equal to two times your spellcasting ability modifier before falling.",
 				"You may take a {@variantrule Bonus Action|XPHB} on later turns to expend a Planar Point and prolong the tempest for another round."
 			]
 		},
@@ -2159,7 +2246,7 @@
 							"type": "entries",
 							"name": "Magma Pit",
 							"entries": [
-								"Upon triggering into this trap, a creature can make a Dexterity saving throw against your Spell Save DC to attempt to avoid falling in. On a failed save, the creature falls into the trap, takes an amount of Fire damage equal to your Wisdom modifier, and gains the Restrained condition. This prevents any other creatures from being able to trigger the trap. Otherwise, the creature only takes the damage."
+								"Upon triggering into this trap, a creature can make a Dexterity saving throw against your Spell Save DC to attempt to avoid falling in. On a failed save, the creature falls into the trap, takes an amount of Fire damage equal to your spellcasting ability modifier, and gains the Restrained condition. This prevents any other creatures from being able to trigger the trap. Otherwise, the creature only takes the damage."
 							]
 						},
 						{
@@ -2173,7 +2260,7 @@
 							"type": "entries",
 							"name": "Lifespan",
 							"entries": [
-								"If the trap is not triggered for an amount of turns equal to your Wisdom modifier, then it will naturally be destroyed. The trap will also be destroyed if a creature passes the saving throw to avoid falling in or if they pass the saving throw to escape."
+								"If the trap is not triggered for an amount of turns equal to your spellcasting ability modifier, then it will naturally be destroyed. The trap will also be destroyed if a creature passes the saving throw to avoid falling in or if it passes the saving throw to escape."
 							]
 						}
 					]
@@ -2219,7 +2306,7 @@
 							"type": "entries",
 							"name": "Subtle Trap",
 							"entries": [
-								"Unless a creature has Tremorsense, Truesight, or another ability that would allow them to see through illusions or into the ground, it will be unable to notice the trap being placed or it after it has been placed."
+								"Unless a creature has Tremorsense, Truesight, or another ability that would allow it to see through illusions or into the ground, it will be unable to notice the trap being placed or it after it has been placed."
 							]
 						}
 					]
@@ -2319,7 +2406,7 @@
 			"header": 2,
 			"entries": [
 				"As a Magic Action, you can conjure up to 8oz of coffee from your hands. This coffee may be either hot or cold, and has no added ingredients such as milk or sugar. This coffee will disappear after one hour if not consumed.",
-				"If in a small container, a creature can take a Utilize action to drink the coffee. Upon consuming at least 8oz of this coffee, a creature will gain an amount of Temporary Hit Points equal to your Wisdom modifier."
+				"If in a small container, a creature can take a Utilize action to drink the coffee. Upon consuming at least 8oz of this coffee, a creature will gain an amount of Temporary Hit Points equal to your spellcasting ability modifier."
 			]
 		},
 		{
@@ -2332,7 +2419,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"As a {@variantrule Bonus Action|XPHB}, you can take your surplus energy to increase your capabilities. You can choose to sacrifice an amount of Temporary Hit Points up to your Wisdom modifier. You lose these Temporary Hit Points, but gain an amount of Armor Class equal to the amount sacrificed until the start of your next turn."
+				"As a {@variantrule Bonus Action|XPHB}, you can take your surplus energy to increase your capabilities. You can choose to sacrifice an amount of Temporary Hit Points up to your spellcasting ability modifier. You lose these Temporary Hit Points, but gain an amount of Armor Class equal to the amount sacrificed until the start of your next turn."
 			]
 		},
 		{
@@ -2401,7 +2488,7 @@
 							"type": "entries",
 							"name": "Concentrated",
 							"entries": [
-								"The coffee will grant Temporary Hit Points equal to two times your Wisdom modifier."
+								"The coffee will grant Temporary Hit Points equal to two times your spellcasting ability modifier."
 							]
 						},
 						{
@@ -2448,7 +2535,7 @@
 							"type": "entries",
 							"name": "Concentrated",
 							"entries": [
-								"The coffee will grant Temporary Hit Points equal to two times your Wisdom modifier."
+								"The coffee will grant Temporary Hit Points equal to two times your spellcasting ability modifier."
 							]
 						},
 						{
@@ -2487,6 +2574,70 @@
 			"header": 2,
 			"entries": [
 				"WIP"
+			]
+		},
+		{
+			"name": "Cryomancer",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Cryomancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"{@i Conjure Forbidden Frostfell Magic}",
+				"Cryomancers have access to the magic of the Para-Elemental Plane of Ice, also known as the Frostfell. Cryomancers are one of the most feared forms of Mediums, for their ability to create petrifying ice is known as a horror to behold.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Damage Type|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Planar Freeze|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ice Shock|Medium|RomansSillyHomebrew|Cryomancer|RomansSillyHomebrew|3"
+				}
+			]
+		},
+		{
+			"name": "Planar Freeze",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Cryomancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"The chills of the Frostfell appear in your magic. When you deal Cold damage to a creature, you can expend a Planar Point to reduce its speed by half and reduce its {@variantrule Armor Class|XPHB} by 1 until the start of your next turn, slowing its joints with your frost."
+			]
+		},
+		{
+			"name": "Ice Shock",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Cryomancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"When you score a {@variantrule Critical Hit|XPHB} with an attack that deals Cold damage against a creature, you can expend a Planar Point to take advantage of its momentary weakness to freeze it completely. The creature must make a Constitution saving throw against your Spell Save DC, gaining the {@condition Paralyzed|XPHB} until the start of your next turn on a failed save."
+			]
+		},
+		{
+			"name": "wip",
+			"source": "RomansSillyHomebrew",
+			"className": "Medium",
+			"classSource": "RomansSillyHomebrew",
+			"subclassShortName": "Cryomancer",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"wip"
 			]
 		},
 		{
