@@ -444,7 +444,7 @@
 			]
 		},
 		{
-			"name": "Focused Dodge",
+			"name": "Focused Defense",
 			"category": "O",
 			"source": "RomansSillyHomebrew",
 			"entries": [
@@ -466,7 +466,7 @@
 			]
 		},
 		{
-			"name": "Tactical Dodge",
+			"name": "Tactical Defense",
 			"category": "O",
 			"source": "RomansSillyHomebrew",
 			"entries": [
@@ -504,7 +504,7 @@
 					"type": "entries",
 					"name": "Quick Jeer",
 					"entries": [
-						"You can cast {@spell Vicious Mockery|XPHB} as a {@variantrule Bonus Action|XPHB}. You can do this amount of times equasl to your {@variantrule Proficiency|XPHB|Proficiency Bonus}, and regain all expended uses on a {@variantrule Long Rest|XPHB}."
+						"You can cast {@spell Vicious Mockery|XPHB} as a {@variantrule Bonus Action|XPHB}. You can do this amount of times equal to your {@variantrule Proficiency|XPHB|Proficiency Bonus}, and regain all expended uses on a {@variantrule Long Rest|XPHB}."
 					]
 				}
 			]
@@ -667,6 +667,130 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Perceptive",
+			"category": "G",
+			"source": "RomansSillyHomebrew",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"int": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"wis": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis"
+						]
+					}
+				}
+			],
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"expertise": [
+				{
+					"perception": true
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Eagle Eye",
+					"entries": [
+						"You gain {@variantrule Expertise|XPHB} in {@skill Perception|XPHB}. If you already have {@variantrule Expertise|XPHB} in {@skill Perception|XPHB}, choose another skill to gain {@variantrule Expertise|XPHB} in."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Headstart",
+					"entries": [
+						"When you roll {@variantrule Initiative|XPHB}, you can add the modifier of the ability increased by this feat to the roll."
+					]
+				}
+			]
+		}
+	],
+	"race": [
+		{
+			"name": "Displacerborn",
+			"source": "RomansSillyHomebrew",
+			"edition": "one",
+			"creatureTypes": [
+				"monstrosity"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 35,
+			"skillProficiencies": [
+				{
+					"any": 1
+				}
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "Size:",
+				"entries": [
+					"Medium (about 6-8 feet tall)"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You have {@sense Darkvision|XPHB} with a range of 60 feet."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Displacement",
+					"entries": [
+						"As a {@variantrule Bonus Action|XPHB} you can begin to displace your image, causing attacks to have {@variantrule Disadvantage|XPHB} against you until the start of your next turn. This effect ends if you gain the {@condition Incapacitated|XPHB} condition. You can use this feature an amount of times equal to your {@variantrule Proficiency|XPHB|Proficiency Bonus}, and regain all expended uses upon finishing a {@variantrule Long Rest|XPHB}"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Four Arms",
+					"entries": [
+						"You have two additional arms positioned below your two regular ones. These arms can be used for: Performing Somatic or Material spell components, wielding single-handed weapons, using a shield, taking a {@action Magic|XPHB} action from a Magic Item, interacting with and manipulating objects, and taking the {@action Utilize|XPHB} action.",
+						"Additionally, having two extra arms allows for better utilization of tools and weaponry. You can take the {@action Utilize|XPHB} action as a {@variantrule Bonus Action|XPHB}, and you can make {@variantrule Unarmed Strike|XPHB|Unarmed Strikes} or attacks with weapons lacking the Heavy property as a {@variantrule Bonus Action}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tentacles",
+					"entries": [
+						"You can make {@variantrule Unarmed Strike|XPHB|Unarmed Strikes} using the spiked tentacles on your back. {@variantrule Unarmed Strike|XPHB|Unarmed Strikes} done with these tentacles do {@damage 1d6} + your Strength modifier Piercing damage."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Created in ways shunned by all those who know of it, Displacerborn are large humanoid-esque creatures, considered Monstrosities due to their unnatural nature. They inherit some traits of Displacer Beasts, although diluted by their more humanoid ancestry."
+				]
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"item": [
@@ -676,7 +800,7 @@
 			"rarity": "rare",
 			"reqAttune": true,
 			"entries": [
-				"Upon landing an attack roll against a target with this rapier, you can cast an instantaneous version of the \"Read Thoughts\" action from the spell {@spell Detect Thoughts|XPHB}, with the target being the creature hit by the rapier. You can attempt to probe deeper as a Bonus Action on the turn you use this feature.",
+				"Upon landing an attack roll against a target with this rapier, you can cast an instantaneous version of the \"Read Thoughts\" action from the spell {@spell Detect Thoughts|XPHB}, with the target being the creature hit by the rapier. You can attempt to probe deeper as a {@variantrule Bonus Action|XPHB} on the turn you use this feature.",
 				"This feature can only be used once per turn, and the spell is cast without the use of any Verbal, Somatic, or Material components, and without expending a spell slot."
 			],
 			"attachedSpells": [
@@ -819,7 +943,7 @@
 			],
 			"entries": [
 				"As a {@variantrule Bonus Action|XPHB}, you can conjure a weapon made out of your element. It must be a normally nonmagical Simple or Martial weapon that you are proficient in, and must not be Modern or Futuristic. This weapon deals the same damage type as your Elemental Damage Type if you have one. This conjured weapon will last until you drop it, or until you use this feature again.",
-				"If the weapon has the thrown property, it will last until it hits an object after being thrown. If the weapon requires ammunition, you conjure it with an amount of ammunition ready equal to your spellcasting ability modifier.",
+				"If the weapon has the Thrown property, it will last until it hits an object after being thrown. If the weapon requires ammunition, you conjure it with an amount of ammunition ready equal to your spellcasting ability modifier.",
 				{
 					"type": "entries",
 					"name": "Aberrant Upgrade",
@@ -1607,7 +1731,7 @@
 					"type": "entries",
 					"name": "Corporal Elementalism",
 					"entries": [
-						"You fight infusing your element into your body. You may roll 1d6 in place of your normal damage for Unarmed Strikes, using your spellcasting ability modifier for the attack and damage rolls. Additionally once per turn after hitting an Unarmed Strike, you may infuse further elemental force into your blows, dealing an additional 1d4 damage of the same type (or, if you have one, your Elemental Damage Type). Your Unarmed Strike base damage increases to 1d8 when not wearing armor or a shield."
+						"You fight infusing your element into your body. You may roll {@damage 1d6} in place of your normal damage for Unarmed Strikes, using your spellcasting ability modifier for the attack and damage rolls. Additionally once per turn after hitting an Unarmed Strike, you may infuse further elemental force into your blows, dealing an additional {@damage 1d4} damage of the same type (or, if you have one, your Elemental Damage Type). Your Unarmed Strike base damage increases to {@damage 1d8} when not wearing armor or a shield."
 					]
 				},
 				{
@@ -1877,6 +2001,22 @@
 	],
 	"subclass": [
 		{
+			"name": "Warrior of the Kitchen",
+			"shortName": "Kitchen",
+			"source": "RomansSillyHomebrew",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"edition": "one",
+			"subclassFeatures": [
+				"Warrior of the Kitchen|Monk|XPHB|Kitchen|RomansSillyHomebrew|3",
+				"Blistering Aura|Monk|XPHB|Kitchen|RomansSillyHomebrew|6",
+				"Debilitating Flames|Monk|XPHB|Kitchen|RomansSillyHomebrew|11",
+				"Pyromaniac|Monk|XPHB|Kitchen|RomansSillyHomebrew|17"
+			],
+			"hasFluffImages": true
+		},
+
+		{
 			"name": "Pyromancer",
 			"shortName": "Pyromancer",
 			"source": "RomansSillyHomebrew",
@@ -2015,6 +2155,71 @@
 	],
 	"subclassFeature": [
 		{
+			"name": "Warrior of the Kitchen",
+			"source": "RomansSillyHomebrew",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Kitchen",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"entries": [
+				"{@i Cook Food & Foes}",
+				"Those who commit their utmost focus to honing the skills of a chef are often able to achieve the title of a \"Warrior of the Kitchen\". Those who do this often battle in nonconventional ways, some even refusing to fight with their hands as many Monks may, refusing to dirty them for cooking. Warriors of the Kitchen tend to make sure all of their allies have food of the utmost quality to rejuvenate them in moments of need, and in many cases would hate to see anyone go hungry. Stronger Warriors of the Kitchen may even learn to manifest the power of the chef as a force for combat, learning to scorch their foes.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tools of the Kitchen|Monk|XPHB|Kitchen|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fighting Food|Monk|XPHB|Kitchen|RomansSillyHomebrew|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Combat Cooking|Monk|XPHB|Kitchen|RomansSillyHomebrew|3"
+				}
+			]
+		},
+		{
+			"name": "Tools of the Kitchen",
+			"source": "RomansSillyHomebrew",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Kitchen",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"You gain proficiency with {@item Cook's Utensils|XPHB} if you don't already have it."
+			]
+		},
+		{
+			"name": "Fighting Food",
+			"source": "RomansSillyHomebrew",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Kitchen",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Whenever you finish a {@variantrule Long Rest|XPHB} while holding {@item Cook's Utensils|XPHB}, you can use that tool to create an amount of snacks equal to 1 plus your Wisdom modifier (minimum of two). As a {@variantrule Bonus Action|XPHB} a creature can consume the snack or administer it to another creature within 5 feet of it.",
+				"A creature consuming this snack will regain an amount of {@variantrule Hit Points|XPHB} equal to a roll of your Martial Arts die plus your Wisdom modifier. If the creature is restored to its maximum {@variantrule Hit Points|XPHB} by this, then the creature will gain any additional healing from the snack as {@variantrule Temporary Hit Points|XPHB} instead."
+			]
+		},
+		{
+			"name": "Combat Cooking",
+			"source": "RomansSillyHomebrew",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Kitchen",
+			"subclassSource": "RomansSillyHomebrew",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"As a {@action Magic|XPHB} action while holding {@item Cook's Utensils|XPHB} you can expend 1 Focus Point to hastily create a Fighting Food snack that will become inedible after an hour."
+			]
+		},
+		{
 			"name": "Pyromancer",
 			"source": "RomansSillyHomebrew",
 			"className": "Medium",
@@ -2066,7 +2271,7 @@
 							"type": "entries",
 							"name": "Flame Emanation",
 							"entries": [
-								"You have a 5-foot Emanation of fire originating from you. Creatures that start their turn in this aura have to make a Constitution saving throw or take 2d6 Fire damage on a failed save, and half as much on a successful one."
+								"You have a 5-foot Emanation of fire originating from you. Creatures that start their turn in this aura have to make a Constitution saving throw or take {@damage 2d6} Fire damage on a failed save, and half as much on a successful one."
 							]
 						},
 						{
@@ -2080,7 +2285,7 @@
 							"type": "entries",
 							"name": "Corporal Scorch",
 							"entries": [
-								"Creatures or objects burning from your Planar Burn will take 1d8 Fire damage at the start of their turns instead of 1d4."
+								"Creatures or objects burning from your Planar Burn will take {@damage 1d8} Fire damage at the start of their turns instead of {@damage 1d4.}"
 							]
 						}
 					]
@@ -2299,7 +2504,7 @@
 							"type": "entries",
 							"name": "Tricky Trap",
 							"entries": [
-								"he DC to avoid being trapped or to escape the trap increases by half your Proficiency Bonus (round up)."
+								"he DC to avoid being trapped or to escape the trap increases by half your {@variantrule Proficiency|XPHB|Proficiency Bonus} (round up)."
 							]
 						},
 						{
@@ -2332,7 +2537,7 @@
 							"type": "entries",
 							"name": "Boiling Trap",
 							"entries": [
-								"When a creature triggers your trap, it takes an additional 2d6 initial Fire damage on a failed save, and takes half as much on a success."
+								"When a creature triggers your trap, it takes an additional {@damage 2d6} initial Fire damage on a failed save, and takes half as much on a success."
 							]
 						},
 						{
@@ -2346,7 +2551,7 @@
 							"type": "entries",
 							"name": "Crushing Trap",
 							"entries": [
-								"When a creature triggers your trap, it takes an additional 2d6 initial Bludgeoning damage on a failed save, and takes half as much on a success."
+								"When a creature triggers your trap, it takes an additional {@damage 2d6} initial Bludgeoning damage on a failed save, and takes half as much on a success."
 							]
 						}
 					]
@@ -2611,7 +2816,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"The chills of the Frostfell appear in your magic. When you deal Cold damage to a creature, you can expend a Planar Point to reduce its speed by half and reduce its {@variantrule Armor Class|XPHB} by 1 until the start of your next turn, slowing its joints with your frost."
+				"The chills of the Frostfell appear in your magic. When you deal Cold damage to a creature, you can expend a Planar Point to reduce its speed by half until the start of your next turn, slowing its joints with your frost."
 			]
 		},
 		{
