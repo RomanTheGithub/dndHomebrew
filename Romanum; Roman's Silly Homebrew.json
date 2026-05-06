@@ -727,6 +727,53 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Improvisational",
+			"category": "G",
+			"source": "RomansSillyHomebrew",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Improvised Weaponry",
+					"entries": [
+						"You have proficiency with improvised weapons. Additionally, you can use a {@damage d6} instead of a {@damage d4} when rolling for damage with an improvised weapon."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Improvised Usage",
+					"entries": [
+						"When you wield an object as an improvised weapon, you can choose one property for it to have that would make sense.",
+						"For example, you could take a glass shard and say it has the Finesse property due to its low weight, or you could take a broken fence pole and say it has the Reach property due to its length.",
+						"If you choose the Two-Handed or Versatile property and are wielding the weapon with two hands, or if you choose the Heavy property, then you can use a {@damage d8} as the damage die for the weapon while it has that property."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Entertaining",
+					"entries": [
+						"You gain proficiency in Charisma ({@skill Performance|XPHB} checks. If you already had proficiency in it, you gain {@variantrule Expertise|XPHB} in it."
+					]
+				}
+			]
 		}
 	],
 	"race": [
@@ -741,11 +788,6 @@
 				"M"
 			],
 			"speed": 35,
-			"skillProficiencies": [
-				{
-					"any": 1
-				}
-			],
 			"sizeEntry": {
 				"type": "item",
 				"name": "Size:",
@@ -772,7 +814,7 @@
 					"type": "entries",
 					"name": "Four Arms",
 					"entries": [
-						"You have two additional arms positioned below your two regular ones. These arms can be used for: Performing Somatic or Material spell components, wielding single-handed weapons, using a shield, taking a {@action Magic|XPHB} action from a Magic Item, interacting with and manipulating objects, and taking the {@action Utilize|XPHB} action.",
+						"You have two additional arms positioned below your two regular ones. These arms can be used for: Performing Somatic or Material spell components, wielding single-handed weapons, using a shield, and manipulating or interacting with things around you as normal appendages may.",
 						"Additionally, having two extra arms allows for better utilization of tools and weaponry. You can take the {@action Utilize|XPHB} action as a {@variantrule Bonus Action|XPHB}, and you can make {@variantrule Unarmed Strike|XPHB|Unarmed Strikes} or attacks with weapons lacking the Heavy property as a {@variantrule Bonus Action}."
 					]
 				},
@@ -818,6 +860,64 @@
 			],
 			"dmg1": "1d8",
 			"dmgType": "P"
+		},
+		{
+			"name": "Master's Blade",
+			"source": "RomansSillyHomebrew",
+			"rarity": "varies",
+			"reqAttune": true,
+			"entries": [
+				"You will always be able to use the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon.",
+				"At the start of each of your turns, you can choose the form of this weapon to be a nonmagical Simple or Martial Melee weapon of your choice. This weapon will lose all of its previous nonmagical properties, and instead gain the ones of the weapon you chose. When you do this, you can replace the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon with another of your choice.",
+				"Multiple variations of this item exist, as listed below:",
+				"• {@item Single Master's Blade|RomansSillyHomebrew}",
+				"• {@item Double Master's Blade|RomansSillyHomebrew}",
+				"• {@item Triple Master's Blade|RomansSillyHomebrew}"
+			],
+			"baseItem": "longsword|xphb",
+			"type": "M|XPHB",
+			"weaponCategory": "martial"
+		},
+		{
+			"name": "Single Master's Blade",
+			"source": "RomansSillyHomebrew",
+			"rarity": "uncommon",
+			"reqAttune": true,
+			"entries": [
+				"You will always be able to use the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon.",
+				"At the start of each of your turns, you can choose the form of this weapon to be a nonmagical Simple or Martial Melee weapon of your choice. This weapon will lose all of its previous nonmagical properties, and instead gain the ones of the weapon you chose. When you do this, you can replace the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon with another of your choice."
+			],
+			"baseItem": "longsword|xphb",
+			"type": "M|XPHB",
+			"weaponCategory": "martial"
+		},
+		{
+			"name": "Double Master's Blade",
+			"source": "RomansSillyHomebrew",
+			"rarity": "rare",
+			"reqAttune": true,
+			"entries": [
+				"You will always be able to use the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon.",
+				"At the start of each of your turns, you can choose the form of this weapon to be a nonmagical Simple or Martial Melee weapon of your choice. This weapon will lose all of its previous nonmagical properties, and instead gain the ones of the weapon you chose. When you do this, you can replace the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon with another of your choice.",
+				"Additionally, at the start of each of your turns you can choose an additional {@variantrule Weapon Mastery Properties|XPHB|Mastery} property to use on this weapon until the start of your next turn."
+			],
+			"baseItem": "longsword|xphb",
+			"type": "M|XPHB",
+			"weaponCategory": "martial"
+		},
+		{
+			"name": "Triple Master's Blade",
+			"source": "RomansSillyHomebrew",
+			"rarity": "very rare",
+			"reqAttune": true,
+			"entries": [
+				"You will always be able to use the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon.",
+				"At the start of each of your turns, you can choose the form of this weapon to be a nonmagical Simple or Martial Melee weapon of your choice. This weapon will lose all of its previous nonmagical properties, and instead gain the ones of the weapon you chose. When you do this, you can replace the {@variantrule Weapon Mastery Properties|XPHB|Mastery} property of this weapon with another of your choice.",
+				"Additionally, at the start of each of your turns you can choose two additional {@variantrule Weapon Mastery Properties|XPHB|Mastery} properties to use on this weapon until the start of your next turn."
+			],
+			"baseItem": "longsword|xphb",
+			"type": "M|XPHB",
+			"weaponCategory": "martial"
 		}
 	],
 	"object": [
